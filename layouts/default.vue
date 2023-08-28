@@ -2,7 +2,7 @@
   <v-app>
       <section id="header">
         <v-app-bar elevation="0" color="transparent">
-          <v-img :src="require('@/assets/image/logo.png')" width="11rem" class="ml-5"></v-img>
+          <v-img :src="require('@/static/image/logo.png')" width="11rem" class="ml-5"></v-img>
           <v-list-item class="d-inline-flex justify-end">
                 <v-btn text color="white"
                        v-for="locale in availableLocales"
@@ -61,7 +61,7 @@ export default {
 </script>
 <style scoped>
   #header {
-    background:url('@/assets/image/header-car.png') no-repeat center center;
+    background:url('static/image/header-car.webp') no-repeat center center;
     background-size: cover;
     color: white;
     padding: 10px;
@@ -75,7 +75,7 @@ export default {
   }
   .header-banner-text h1
   {
-    font-size:5.5vh;
+    font-size:calc(3rem + 8 * (100vw - 185rem) / 880);
     font-weight: 700;
     margin: 0 auto;
     color: #ffffff;
